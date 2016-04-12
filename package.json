@@ -1,0 +1,42 @@
+{
+  "name": "mouse-hash",
+  "version": "0.0.0",
+  "description": "Generate a hash by moving your mouse",
+  "license": "MIT",
+  "repository": "kevva/mouse-hash",
+  "author": {
+    "name": "Kevin Martensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "github.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "hash",
+    "mouse",
+    "sha"
+  ],
+  "dependencies": {
+    "hasha": "^2.2.0",
+    "meow": "^3.7.0",
+    "object-assign": "^4.0.1"
+  },
+  "optionalDependencies": {
+    "osx-mouse": "^1.2.0",
+    "win-mouse": "^1.1.0"
+  },
+  "devDependencies": {
+    "xo": "*"
+  }
+}
