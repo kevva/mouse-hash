@@ -15,7 +15,7 @@ $ npm install --save mouse-hash
 ```js
 const mouseHash = require('mouse-hash');
 
-mouseHash((err, hash) => {
+mouseHash().then(hash => {
 	console.log(hash);
 	//=> 3bac6a60a8e9d1fe5ad5457562bb16d6226f952f01f3
 });
@@ -24,7 +24,9 @@ mouseHash((err, hash) => {
 
 ## API
 
-### mouseHash([options], callback)
+### mouseHash([options])
+
+Returns a promise that resolves to the generated hash in `sha512`.
 
 #### options
 
@@ -34,14 +36,6 @@ Type: `number`<br>
 Default: `500`
 
 Length of the array of mouse coordinates.
-
-#### callback(err, hash)
-
-##### hash
-
-Type: `string`
-
-The generated hash in `sha512`.
 
 
 ## CLI
