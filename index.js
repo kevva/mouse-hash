@@ -1,8 +1,6 @@
 'use strict';
 const hasha = require('hasha');
 const objectAssign = require('object-assign');
-const osxMouse = require('osx-mouse');
-const winMouse = require('win-mouse');
 
 module.exports = (opts, cb) => {
 	if (typeof opts === 'function') {
@@ -12,7 +10,7 @@ module.exports = (opts, cb) => {
 
 	opts = objectAssign({length: 500}, opts);
 
-	const mouse = process.platform === 'darwin' ? osxMouse() : winMouse();
+	const mouse = process.platform === 'darwin' ? require('osx-mouse')() : require('win-mouse')();
 	const arr = [];
 
 	mouse.on('move', (x, y) => {
