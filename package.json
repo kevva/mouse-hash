@@ -1,6 +1,6 @@
 {
   "name": "mouse-hash",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Generate a hash by moving your mouse",
   "license": "MIT",
   "repository": "kevva/mouse-hash",
