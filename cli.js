@@ -13,11 +13,4 @@ const cli = meow([
 
 console.log('Move your mouse\n');
 
-mouseHash(cli.flags, (err, hash) => {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-
-	console.log(hash);
-});
+mouseHash(cli.flags).then(hash => console.log(hash));
