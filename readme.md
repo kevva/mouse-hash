@@ -1,6 +1,6 @@
 # mouse-hash
 
-> Generate a hash by moving your mouse *(OS X and Windows)*
+> Generate a hash by moving your mouse *(macOS and Windows)*
 
 
 ## Install
