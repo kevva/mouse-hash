@@ -1,16 +1,15 @@
 'use strict';
-var md5Hex = require('md5-hex');
-var mousePosition = require('mouse-position');
-var objectAssign = require('object-assign');
+const md5Hex = require('md5-hex');
+const mousePosition = require('mouse-position');
 
-module.exports = function (opts) {
-	opts = objectAssign({length: 500}, opts);
+module.exports = opts => {
+	opts = Object.assign({length: 500}, opts);
 
-	var mouse = mousePosition();
-	var arr = [];
+	const mouse = mousePosition();
+	const arr = [];
 
-	return new Promise(function (resolve) {
-		mouse.on('move', function () {
+	return new Promise(resolve => {
+		mouse.on('move', () => {
 			arr.push(String([mouse[0], mouse[1]]));
 
 			if (arr.length >= opts.length) {

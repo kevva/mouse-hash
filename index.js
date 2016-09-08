@@ -1,10 +1,9 @@
 'use strict';
 const hasha = require('hasha');
-const objectAssign = require('object-assign');
 const mouse = process.platform === 'darwin' ? require('osx-mouse')() : require('win-mouse')();
 
 module.exports = opts => {
-	opts = objectAssign({length: 500}, opts);
+	opts = Object.assign({length: 500}, opts);
 
 	const arr = [];
 
